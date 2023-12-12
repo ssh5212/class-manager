@@ -1,0 +1,51 @@
+spring:
+  data:
+  #    redis:
+  #      host: k9b202.p.ssafy.io
+  #      port: 6379
+  #      password: 1q2w3e4r
+
+  datasource:
+    #        server db
+    #    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    url: jdbc:mysql://k9b202.p.ssafy.io:3388/herehear?allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul&useSSL=false&useUnicode=true&characterEncoding=utf8
+    #    username: herehear
+    #    password: droptheherehear
+
+    #       local db
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/class_manager?serverTimezone=Asia/Seoul&useSSL=false&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: angel1324
+
+  # jpa setting
+  jpa:
+    # server? ?? ?? false? ??
+    show-sql: true
+    hibernate:
+      ddl-auto: create  # ??? validate ?? - ???? create? ???? ?????? validate? ???? ???? ?? ??
+      # 왓더 뻑?
+      # create? ? ?? ???? ???
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+
+  # ?? ??? ?? ??
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 500MB
+
+# logging setting
+logging:
+  level:
+    root: info
+    org:
+      springframework:
+        security: debug
+      hibernate:
+        sql: debug
+        type:
+          descriptor:
+            sql: trace
