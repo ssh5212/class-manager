@@ -13,10 +13,10 @@ spring:
     #    password: droptheherehear
 
     #       local db
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/class_manager?serverTimezone=Asia/Seoul&useSSL=false&useUnicode=true&characterEncoding=utf8
-    username: root
-    password: angel1324
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/class_manager?serverTimezone=Asia/Seoul&useSSL=false&useUnicode=true&characterEncoding=utf8
+      username: root
+      password: angel1324
 
   # jpa setting
   jpa:
